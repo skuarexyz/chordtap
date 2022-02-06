@@ -75,7 +75,7 @@ def on_press(key):
 				break
 		current_word = []
 	
-	elif key == keyboard.Key.shift_l:
+	elif key == keyboard.Key.shift_r:
 		if len(current_word) > 0:
 			print("Backspace", len(current_word[-1]), "times")
 			for i in range(len(current_word[-1])):
@@ -98,14 +98,17 @@ def on_press(key):
 			else:
 				# add to the last chord
 				current_word[-1] += key.char
+			
+			print()
+			print('Word:', '-'.join(current_word))
+			try:
+				print('Chord:', ''.join(current_word[-1]))
+			except:
+				print('No chord')
 		except: pass
+
 	
-	print()
-	print('Word:', '-'.join(current_word))
-	try:
-		print('Chord:', ''.join(current_word[-1]))
-	except:
-		print('No chord')
+	
 	last_key_time = time.time()
 
 if __name__ == '__main__':
