@@ -114,7 +114,7 @@ if __name__ == '__main__':
 		exit()
 
 	try:
-		with open(f'dictionaries/{argv[1]}.json') as f:
+		with open(f'dictionaries/{argv[1]}.json', encoding="utf8") as f:
 			words = json.load(f)
 	except FileNotFoundError:
 		print("Dictionary file not found")
