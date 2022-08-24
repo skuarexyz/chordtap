@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
 	print("Press keys to type words")
 	print("Press space or enter to submit")
-	print("Press backspace to delete last chord")
+	print("Press right shift to delete last chord/word")
 	print("Press esc to exit")
 
 	with keyboard.Listener(on_press=on_press) as listener:

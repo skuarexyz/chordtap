@@ -1,0 +1,12 @@
+{
+    "while": ["wail"],
+    "true": ["tru"],
+    "false": ["fals"],
+    "for": ["for"],
+    "foreach": ["for", "each"],
+    "in": ["in"],
+    "function": ["funk", "shon"],
+    "break": ["breik"],
+    "console": ["kon", "sole"],
+    "log": ["log"]
+}
