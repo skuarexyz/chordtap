@@ -82,6 +82,7 @@ def on_press(key):
 				controller.press(keyboard.Key.backspace) # backspace
 				controller.release(keyboard.Key.backspace)
 			current_word.pop() # remove last chord
+			print('Word:', ' '.join(current_word))
 		
 		elif len(word_history) > 0:
 			print("Backspace", len(word_history[-1]) + 1, "times")
@@ -89,6 +90,7 @@ def on_press(key):
 				controller.press(keyboard.Key.backspace) # backspace
 				controller.release(keyboard.Key.backspace)
 			word_history.pop() # remove last word
+			print('History:', ' '.join(word_history))
 	
 	else:
 		try:
@@ -100,14 +102,13 @@ def on_press(key):
 				current_word[-1] += key.char
 			
 			print()
-			print('Word:', '-'.join(current_word))
+			print('Word:', ' '.join(current_word))
 			try:
 				print('Chord:', ''.join(current_word[-1]))
 			except:
 				print('No chord')
+			print('History:', ' '.join(word_history))
 		except: pass
-
-	
 	
 	last_key_time = time.time()
 
